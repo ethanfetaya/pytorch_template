@@ -1,0 +1,24 @@
+debug: True
+## Loging options
+logging:
+  exp_name: 'exp1'
+  save_path: './logs'
+
+## Data parameters
+data:
+  dataset: 'CIFAR10'
+
+## Model parameters
+model:
+  model_name: 'LeNet'
+
+# Training parameters
+train:
+  batch_size: 64
+  test_batch_size: 100
+  n_epochs: 30
+  optimizer: adam
+  learning_rate: 0.001
+  unroll_optimizer: sgd
+  eta: 10
+
