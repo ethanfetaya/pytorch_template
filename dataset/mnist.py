@@ -7,7 +7,7 @@ def MNIST(data_config):
     if 'data_folder' in data_config:
         data_folder = data_config['data_folder']
     else:
-        data_folder = './dataset/'
+        data_folder = './data/'
     train_transform = [transforms.ToTensor()]
     test_transform = [transforms.ToTensor()]
     if 'normalize' in data_config and data_config['normalize']:
