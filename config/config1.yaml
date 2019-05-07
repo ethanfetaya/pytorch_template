@@ -1,24 +1,32 @@
 debug: True
+seed: 42
 ## Loging options
 logging:
   exp_name: 'exp1'
-  save_path: './logs'
+  base_dir: './logs'
 
 ## Data parameters
 data:
-  dataset: 'CIFAR10'
+  name: 'MNIST'
+  dataset_parameters:
+    validation_size: 5000
+    normalize: True
+    flip: False
+    crop: True
+    num_workers: 2
+    batch_size: 64
+    test_batch_size: 100
 
 ## Model parameters
 model:
   model_name: 'LeNet'
+  model_parameters:
+    n_classes: 10
 
-# Training parameters
-train:
-  batch_size: 64
-  test_batch_size: 100
+# Optimization parameters
+optimization:
   n_epochs: 30
   optimizer: adam
-  learning_rate: 0.001
-  unroll_optimizer: sgd
-  eta: 10
+  lr: 0.001
+  weight_decay: 0.
 
